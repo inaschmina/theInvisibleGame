@@ -31,7 +31,7 @@ public class MapSelectionMaster : MonoBehaviour
             MoveFigureToField(hit);
         }
     }
-
+    
     public void MoveFigureToField(RaycastHit hit)
     {
         FindObjectOfType<MapFigure>().currentTarget = hit.point;
