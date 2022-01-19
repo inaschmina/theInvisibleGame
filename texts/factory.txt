@@ -1,0 +1,1 @@
+{"npcname": "poor dude 1","level1text": "they are blaming us for those attack, unbelievable", "fa":"yes Ive heard", "sa": "unfair much but okay", "ta": "ok, bye", "level2text": "i bet it was all done by the military wouldnt surprise me at all", "fa2": "totally agree", "sa2": "does not seem right", "ta2": "well i do not care bye", "outcomepos": "*gift*", "outcomeneg": "ok"}

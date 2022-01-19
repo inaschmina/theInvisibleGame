@@ -1,0 +1,1 @@
+{"npcname": "military lady","level1text": "Guarding the  city hall tonight huh", "fa":"yes always", "sa": "Crab i totally forgot about it", "ta": "ok, bye", "level2text": "Yeah making sure everyone is on time, the mayor is strict af", "fa2": "i wont disappoint", "sa2": "he scares me..", "ta2": "well i do not care bye", "outcomepos": "*gift*", "outcomeneg": "ok"}

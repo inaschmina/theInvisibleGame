@@ -1,0 +1,1 @@
+{"npcname": "train lady","level1text": "Busy day today, none of the trains are leaving", "fa":"why is that", "sa": "is it the ruckus from yesterday?", "ta": "ok, bye", "level2text": "yeah but the craftsman district should be on it", "fa2": "they better hurry", "sa2": "okay i see", "ta2": "well i do not care bye", "outcomepos": "*gift*", "outcomeneg": "ok"}
