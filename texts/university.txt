@@ -1,1 +1,0 @@
-{"npcname": "professor","level1text": "Have you done your researches?", "fa":"yes, why?", "sa": "Not yet, is it urgent?", "ta": "no, bye", "level2text": "we need it for our ceremony", "fa2": "well im done", "sa2": "okay", "ta2": "well i do not care bye", "outcomepos": "*gift*", "outcomeneg": "Finish it as soon as possible"}
