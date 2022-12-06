@@ -13,7 +13,7 @@ public class Ballons : MonoBehaviour
     public int pointVal;
 
     private GameManager gameManager;
-
+    private Break_Ghost break_ghost;
     public ParticleSystem explosionParticle;
     public ParticleSystem fireworkParticle;
 
@@ -46,7 +46,9 @@ public class Ballons : MonoBehaviour
             {
                 RandomMystery();
             }
-            else { Instantiate(explosionParticle, transform.position, explosionParticle.transform.rotation); }
+            else { Instantiate(explosionParticle, transform.position, explosionParticle.transform.rotation);
+                break_ghost.break_Ghost();
+            }
         }
     } // if clicked 
 
