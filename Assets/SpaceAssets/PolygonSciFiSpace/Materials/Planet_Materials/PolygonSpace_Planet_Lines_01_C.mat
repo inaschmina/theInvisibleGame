@@ -26,17 +26,15 @@ Material:
   m_Name: PolygonSpace_Planet_Lines_01_C
   m_Shader: {fileID: -6465566751694194690, guid: 27ef9ca2ab5d3dd41b2a27523eaac981,
     type: 3}
-  m_ValidKeywords:
-  - _ALPHATEST_ON
+  m_ValidKeywords: []
+  m_InvalidKeywords:
   - _DISABLE_DECALS
   - _DISABLE_SSR_TRANSPARENT
-  m_InvalidKeywords: []
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: 2450
-  stringTagMap:
-    RenderType: TransparentCutout
+  stringTagMap: {}
   disabledShaderPasses:
   - TransparentDepthPrepass
   - TransparentDepthPostpass
@@ -188,7 +186,7 @@ Material:
     - _PlanetSurfaceContrast: -3.6
     - _PlanetSurfaceFloat: 2
     - _PlanetSurfaceTiling: 1
-    - _QueueControl: -1
+    - _QueueControl: 1
     - _QueueOffset: 0
     - _RayTracing: 0
     - _ReceivesSSR: 1
