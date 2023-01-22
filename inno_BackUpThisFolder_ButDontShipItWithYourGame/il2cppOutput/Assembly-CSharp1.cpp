@@ -6153,28 +6153,30 @@ IL_0030:
 
 IL_0049:
 	{
-		// float x = Input.acceleration.x;
+		// float x = Input.acceleration.x *speed;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_6;
 		L_6 = Input_get_acceleration_m73A4104C360F0F5E590B94745137BDD78AEFC56A(NULL);
 		float L_7 = L_6.___x_2;
-		V_0 = L_7;
-		// float y = Input.acceleration.y;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_8;
-		L_8 = Input_get_acceleration_m73A4104C360F0F5E590B94745137BDD78AEFC56A(NULL);
-		float L_9 = L_8.___y_3;
-		V_1 = L_9;
+		float L_8 = __this->___speed_5;
+		V_0 = ((float)il2cpp_codegen_multiply(L_7, L_8));
+		// float y = Input.acceleration.y *speed;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_9;
+		L_9 = Input_get_acceleration_m73A4104C360F0F5E590B94745137BDD78AEFC56A(NULL);
+		float L_10 = L_9.___y_3;
+		float L_11 = __this->___speed_5;
+		V_1 = ((float)il2cpp_codegen_multiply(L_10, L_11));
 		// playerRb.AddForce(new Vector3(x, 0, y) * speed);
-		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_10 = __this->___playerRb_4;
-		float L_11 = V_0;
-		float L_12 = V_1;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_13;
-		memset((&L_13), 0, sizeof(L_13));
-		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_13), L_11, (0.0f), L_12, /*hidden argument*/NULL);
-		float L_14 = __this->___speed_5;
+		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_12 = __this->___playerRb_4;
+		float L_13 = V_0;
+		float L_14 = V_1;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_15;
-		L_15 = Vector3_op_Multiply_m87BA7C578F96C8E49BB07088DAAC4649F83B0353_inline(L_13, L_14, NULL);
-		NullCheck(L_10);
-		Rigidbody_AddForce_m7A3EEEED21F986917107CBA6CC0106DCBC212198(L_10, L_15, NULL);
+		memset((&L_15), 0, sizeof(L_15));
+		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_15), L_13, (0.0f), L_14, /*hidden argument*/NULL);
+		float L_16 = __this->___speed_5;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_17;
+		L_17 = Vector3_op_Multiply_m87BA7C578F96C8E49BB07088DAAC4649F83B0353_inline(L_15, L_16, NULL);
+		NullCheck(L_12);
+		Rigidbody_AddForce_m7A3EEEED21F986917107CBA6CC0106DCBC212198(L_12, L_17, NULL);
 		// }
 		return;
 	}
@@ -6409,8 +6411,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* PlayerController_PowerupCountd
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController__ctor_mDDAB7C7D82E1A5B3E6C197B1AB9D653DFE554F33 (PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* __this, const RuntimeMethod* method) 
 {
 	{
-		// private float speed = 4.0f;
-		__this->___speed_5 = (4.0f);
+		// private float speed = 20.0f;
+		__this->___speed_5 = (20.0f);
 		// private float powerUpStrength = 15.0f;
 		__this->___powerUpStrength_8 = (15.0f);
 		// private float jumpForce = 0.2f;

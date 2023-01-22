@@ -545,8 +545,8 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
-  orthographic: 1
+  field of view: 19.3
+  orthographic: 0
   orthographic size: 10
   m_Depth: -1
   m_CullingMask:
@@ -761,7 +761,7 @@ MeshCollider:
   serializedVersion: 4
   m_Convex: 1
   m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 8878a37eb67ddac4ead51890a31d6a18, type: 3}
+  m_Mesh: {fileID: -193274103037264630, guid: 401720a97aa9a1e4297f88cf62f6ba2e, type: 3}
 --- !u!1 &1739848219
 GameObject:
   m_ObjectHideFlags: 0

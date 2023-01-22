@@ -5,7 +5,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody playerRb;
-    private float speed = 4.0f;
+    private float speed = 10.0f;
+    private float turnspeed = 20.0f;
     private GameObject focalPoint;
 
     // POWER UP
@@ -42,8 +43,8 @@ public class PlayerController : MonoBehaviour
         else
         {
             // get the device's acceleration in the x and y directions
-            float x = Input.acceleration.x;
-            float y = Input.acceleration.y;
+            float x = Input.acceleration.x *turnspeed;
+            float y = Input.acceleration.y *turnspeed;
 
             // move the player in the corresponding direction
             playerRb.AddForce(new Vector3(x, 0, y) * speed);
