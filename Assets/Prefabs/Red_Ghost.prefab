@@ -114,8 +114,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 0.86037827}
+  m_Center: {x: 0, y: 0, z: -0.06981087}
 --- !u!114 &7474489157470431931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -406,8 +406,8 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 6638542950882720224}
   m_AABB:
-    m_Center: {x: 1.1765561, y: 0.119811416, z: -0.2014991}
-    m_Extent: {x: 5.374925, y: 2.3276138, z: 2.4344716}
+    m_Center: {x: 1.1295292, y: 0.119811535, z: -0.20149899}
+    m_Extent: {x: 5.4219522, y: 2.3276138, z: 2.4344716}
   m_DirtyAABB: 0
 --- !u!65 &3285553195128337653
 BoxCollider:
@@ -420,8 +420,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.9096084, y: 9.924463, z: 2.997851}
-  m_Center: {x: 3.6967297, y: 6.8127832, z: -2.997699}
+  m_Size: {x: 2.370857, y: 3.0444412, z: 1.605999}
+  m_Center: {x: 3.7242472, y: 9.8874, z: -2.8314776}
 --- !u!1 &1866027801331572211
 GameObject:
   m_ObjectHideFlags: 0

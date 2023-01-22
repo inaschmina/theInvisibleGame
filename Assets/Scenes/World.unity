@@ -133,7 +133,6 @@ GameObject:
   m_Component:
   - component: {fileID: 422218015}
   - component: {fileID: 422218014}
-  - component: {fileID: 422218016}
   - component: {fileID: 422218017}
   m_Layer: 0
   m_Name: Directional Light
@@ -219,18 +218,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!114 &422218016
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 422218013}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &422218017
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -343,7 +330,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 520bb47c46cf8624fafb307b7d1b862a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 1887675991}
 --- !u!4 &1659859599
 Transform:
   m_ObjectHideFlags: 0
@@ -386,7 +373,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1760703bbd54c04488a8d10600262ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_PlanePrefab: {fileID: 0}
+  m_PlanePrefab: {fileID: 5863074856653379340, guid: 62eca473061f595469021fdc27645953,
+    type: 3}
   m_DetectionMode: -1
 --- !u!114 &1659859602
 MonoBehaviour:

@@ -676,12 +676,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f006d276c50cb0c4ca435064fa2f74cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aRRaycastManager: {fileID: 1050941857}
-  targets:
-  - {fileID: 3473604818700566202, guid: 6f225f9edaa6e5d4db54739b6786670c, type: 3}
-  - {fileID: 6774994713930899582, guid: cf176685159a3f144820a14ced5fda16, type: 3}
-  - {fileID: 212825764923267050, guid: 9649886940f70964884588bb94074783, type: 3}
-  - {fileID: 1389201777732016694, guid: 8982ec4b688acb34b88b0b66712902e0, type: 3}
+  targets: {fileID: 212825764923267050, guid: 9649886940f70964884588bb94074783, type: 3}
   isGameActive: 0
   titleScreen: {fileID: 818423524}
   livesText: {fileID: 426956533}

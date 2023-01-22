@@ -32,6 +32,7 @@ public class Ballons : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*
         if (Input.touchCount > 0) {
 
             if (gameManager.isGameActive)
@@ -46,7 +47,7 @@ public class Ballons : MonoBehaviour
             }
 
         }
-
+        */
     }
 
     private void OnMouseDown()
@@ -59,6 +60,8 @@ public class Ballons : MonoBehaviour
         Destroy(gameObject);
         if (gameManager.isGameActive) { gameManager.UpdateLives(1); }
         if (gameManager.getLives() == 0) { gameManager.GameOver(); }
+        gameManager.UpdateScore(pointVal);
+        Instantiate(explosionParticle, transform.position, explosionParticle.transform.rotation);
     } // if targets pass sensor
 
     Vector3 RandomForce()
