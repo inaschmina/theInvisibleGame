@@ -32,35 +32,44 @@ public class Ballons : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*
-        if (Input.touchCount > 0) {
+        if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began)
+        {
 
             if (gameManager.isGameActive)
             {
+                // create a ray at the touch position
+                Ray ray = Camera.main.ScreenPointToRay(Input.touches[0].position);
+                RaycastHit hit;
 
-
-                Destroy(gameObject);
-                gameManager.UpdateScore(pointVal);
-                Instantiate(explosionParticle, transform.position, explosionParticle.transform.rotation);
-
-
+                // check for a collision at the touch position
+                if (Physics.Raycast(ray, out hit))
+                {
+                    // check if the object hit is the same as the current object
+                    if (hit.transform == this.transform)
+                    {
+                        // destroy the current object
+                        Destroy(gameObject);
+                        Debug.Log("touched once");
+                        gameManager.UpdateScore(pointVal);
+                        Instantiate(explosionParticle, transform.position, explosionParticle.transform.rotation);
+                    }
+                }
             }
 
         }
-        */
     }
 
     private void OnMouseDown()
     {
-        
+       
     } // if clicked 
 
-    private void OnTriggerEnter(Collider other)
+
+    private void OnCollisionEnter(Collision other)
     {
         Destroy(gameObject);
         if (gameManager.isGameActive) { gameManager.UpdateLives(1); }
         if (gameManager.getLives() == 0) { gameManager.GameOver(); }
-        gameManager.UpdateScore(pointVal);
         Instantiate(explosionParticle, transform.position, explosionParticle.transform.rotation);
     } // if targets pass sensor
 
