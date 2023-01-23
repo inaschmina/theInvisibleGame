@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.ARFoundation;
+using UnityEngine.XR.ARSubsystems;
 
 public class PlayerController2 : MonoBehaviour
 {
+    private ARSessionOrigin m_ARSessionOrigin;
     private Rigidbody playerRb;
     private float jumpForce = 600;
     private float gravityModifier = 1.9f;
@@ -31,6 +34,7 @@ public class PlayerController2 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        m_ARSessionOrigin = GetComponent<ARSessionOrigin>();
         playerRb = GetComponent<Rigidbody>();
         Physics.gravity *= gravityModifier;
         playerAnim = GetComponent<Animator>();
@@ -40,40 +44,34 @@ public class PlayerController2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space) && isOnGround && !gameOver)
+        if (Input.touchCount > 0)
         {
-            jump();
-        }
-        else if(Input.GetKeyDown(KeyCode.Space) && !isOnGround && !gameOver)
-        { 
-            if (!doubleJump)
+            Touch touch = Input.GetTouch(0);
+            if (touch.phase == TouchPhase.Began && isOnGround && !gameOver)
             {
                 jump();
-                doubleJump = true;
             }
-        }
-        else if(Input.GetKey(KeyCode.LeftShift))
-        {
-            boost = true;
-        }
-        else
-        {
-            boost = false;
+            else if (touch.phase == TouchPhase.Began && !isOnGround && !gameOver)
+            {
+                if (!doubleJump)
+                {
+                    jump();
+                    doubleJump = true;
+                }
+            }
         }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        
-
-        if(collision.gameObject.CompareTag("Ground"))
+        if (collision.gameObject.CompareTag("Ground"))
         {
             isOnGround = true;
             doubleJump = false;
-            if(!gameOver)
+            if (!gameOver)
             { dirtParticle.Play(); }
         }
-        else if(collision.gameObject.CompareTag("Obstacle"))
+        else if (collision.gameObject.CompareTag("Obstacle"))
         {
             gameOver = true;
             Debug.Log("Game Over!");
@@ -98,4 +96,5 @@ public class PlayerController2 : MonoBehaviour
 
     public ParticleSystem getFirework()
     { return fireworkParticle; }
+
 }

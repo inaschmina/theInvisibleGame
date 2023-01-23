@@ -5,8 +5,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody playerRb;
-    private float speed = 10.0f;
-    private float turnspeed = 20.0f;
+    private float speed = 20.0f;
+    private float turnspeed = 10.0f;
     private GameObject focalPoint;
 
     // POWER UP
