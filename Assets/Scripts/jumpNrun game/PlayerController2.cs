@@ -7,6 +7,7 @@ using UnityEngine.XR.ARSubsystems;
 public class PlayerController2 : MonoBehaviour
 {
     private ARSessionOrigin m_ARSessionOrigin;
+    private ARPlaneManager m_ARPlaneManager;
     private Rigidbody playerRb;
     private float jumpForce = 600;
     private float gravityModifier = 1.9f;
@@ -35,6 +36,8 @@ public class PlayerController2 : MonoBehaviour
     void Start()
     {
         m_ARSessionOrigin = GetComponent<ARSessionOrigin>();
+        m_ARPlaneManager = GetComponent<ARPlaneManager>();
+        m_ARPlaneManager.planesChanged += OnPlanesChanged;
         playerRb = GetComponent<Rigidbody>();
         Physics.gravity *= gravityModifier;
         playerAnim = GetComponent<Animator>();
@@ -91,10 +94,18 @@ public class PlayerController2 : MonoBehaviour
         playerAudio.PlayOneShot(jumpSound, 1.0f);
     }
 
-    public Animator getAnim()
-    { return playerAnim; }
-
     public ParticleSystem getFirework()
     { return fireworkParticle; }
 
+    public Animator getAnim()
+    { return playerAnim; }
+
+    void OnPlanesChanged(ARPlanesChangedEventArgs eventArgs)
+    {
+        foreach (ARPlane plane in eventArgs.added)
+        {
+            Debug.Log("New plane detected!");
+            // Do something with the new plane
+        }
+    }
 }
