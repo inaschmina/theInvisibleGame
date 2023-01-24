@@ -19,7 +19,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 
-public class PackageSpawner : MonoBehaviour
+public class PackageManager : MonoBehaviour
 {
     public DrivingSurfaceManager DrivingSurfaceManager;
     public PackageBehaviour Package;
@@ -53,7 +53,7 @@ public class PackageSpawner : MonoBehaviour
 
     public void SpawnPackage(ARPlane plane)
     {
-        var packageClone = GameObject.Instantiate(PackagePrefab);
+        var packageClone = Instantiate(PackagePrefab);
         packageClone.transform.position = FindRandomLocation(plane);
 
         Package = packageClone.GetComponent<PackageBehaviour>();
