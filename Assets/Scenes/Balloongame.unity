@@ -657,6 +657,7 @@ GameObject:
   m_Component:
   - component: {fileID: 368048802}
   - component: {fileID: 368048801}
+  - component: {fileID: 368048803}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -676,7 +677,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f006d276c50cb0c4ca435064fa2f74cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targets: {fileID: 212825764923267050, guid: 9649886940f70964884588bb94074783, type: 3}
   isGameActive: 0
   titleScreen: {fileID: 818423524}
   livesText: {fileID: 426956533}
@@ -700,6 +700,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &368048803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 368048800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adf0186d510359a43b55eaf5ed442213, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targets: {fileID: 3473604818700566202, guid: 6f225f9edaa6e5d4db54739b6786670c, type: 3}
 --- !u!1 &426956531
 GameObject:
   m_ObjectHideFlags: 0
