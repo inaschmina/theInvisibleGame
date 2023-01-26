@@ -5,6 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - Sensor
+  - Enemy
+  - Obstacle
+  - BigBill
+  - perry the plat ypus
+  - balloon
+  - VroomVroom
   layers:
   - Default
   - TransparentFX
