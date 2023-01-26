@@ -11,6 +11,9 @@ public class GameMenu : MonoBehaviour
     public GameObject BalloonTitle;
     public GameObject VroomTitle;
     public GameObject PerryTitle;
+
+    // canvas
+    public GameObject Canvas;
     void Start()
     {
         
@@ -27,7 +30,7 @@ public class GameMenu : MonoBehaviour
     }
 
     public void BackToScene()
-    { gameObject.SetActive(false); }
+    { Canvas.gameObject.SetActive(false); }
 
     // Update is called once per frame
     void Update()
@@ -42,7 +45,7 @@ public class GameMenu : MonoBehaviour
                 if (hit.transform == this.transform)
                 {
                     // open menu with correct name
-                    gameObject.SetActive(true);
+                    Canvas.gameObject.SetActive(true);
 
                     if(gameObject.tag == "balloon")
                     {
