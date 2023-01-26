@@ -59,11 +59,6 @@ public class Ballons : MonoBehaviour
         }
     }
 
-    private void OnMouseDown()
-    {
-       
-    } // if clicked 
-
 
     private void OnCollisionEnter(Collision other)
     {

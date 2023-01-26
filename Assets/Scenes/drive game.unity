@@ -513,7 +513,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 227942487}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11500000, guid: f5648e2e21a60cb479dd86d78e608ad6, type: 3}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &227942487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -777,13 +789,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isGameActive: 0
-  titleScreen: {fileID: 0}
-  livesText: {fileID: 0}
-  scoreText: {fileID: 0}
+  titleScreen: {fileID: 1541339594}
+  livesText: {fileID: 1666702119}
+  scoreText: {fileID: 1911309608}
   gamePaused: 0
   pausedText: {fileID: 0}
-  gameOverText: {fileID: 0}
-  restartButton: {fileID: 0}
+  gameOverText: {fileID: 387479767}
+  restartButton: {fileID: 1591365812}
 --- !u!4 &771979093
 Transform:
   m_ObjectHideFlags: 0
@@ -1102,7 +1114,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1265048161}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11500000, guid: f5648e2e21a60cb479dd86d78e608ad6, type: 3}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1265048161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1238,7 +1262,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1459825140}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11500000, guid: f5648e2e21a60cb479dd86d78e608ad6, type: 3}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1459825140
 MonoBehaviour:
   m_ObjectHideFlags: 0

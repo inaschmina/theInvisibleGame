@@ -47,10 +47,11 @@ public class GameManager : MonoBehaviour
 
     public void StartGame(float difficulty)
     {
-        isGameActive = true;
         UpdateScore(0);
         UpdateLives(0);
+        Debug.Log("l: " + lives + " s: " + score);
         this.difficulty = difficulty;
+        isGameActive = true;
         titleScreen.gameObject.SetActive(false);
     }
 
@@ -66,6 +67,7 @@ public class GameManager : MonoBehaviour
         {
             score = 0;
             GameOver();
+            Debug.Log("score game over");
         }
         scoreText.text = "Score: " + score;
     }
@@ -102,9 +104,11 @@ public class GameManager : MonoBehaviour
         if (lives > 0)
         {
             lives -= livesLost;
+            Debug.Log("lives lost");
         }
         else
-        { GameOver(); }
+        { GameOver(); Debug.Log("lifes game over");
+        }
 
         livesText.text = "Lives: " + lives;
     }
