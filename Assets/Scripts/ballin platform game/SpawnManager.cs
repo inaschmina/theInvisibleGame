@@ -1,9 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using TMPro;
+using UnityEngine.UI;
 
 public class SpawnManager : MonoBehaviour
 {
+    // TITLE
+    public GameObject titleScreen;
+
+    // GAME OVER TEXT
+    public TextMeshProUGUI gameOverText;
+    public Button restartButton;
+
+
     public GameObject[] enemyPrefab;
     private float spawnRange = 9;
 
@@ -16,13 +27,45 @@ public class SpawnManager : MonoBehaviour
 
     private PlayerController PlayerScript;
 
+    private float startTime;
+    private Text timeText;
+
+    private void Awake()
+    {
+        timeText = GetComponent<Text>();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
+        
+    }
+
+    public void StartGame()
+    {
+        titleScreen.gameObject.SetActive(false);
+
         SpawnEnemyWave(waveNum);
         SpawnPowerup();
 
         PlayerScript = GameObject.Find("Player").GetComponent<PlayerController>();
+        startTime = Time.time;
+    }
+
+    public void GameOver()
+    {
+        gameOverText.gameObject.SetActive(true);
+        restartButton.gameObject.SetActive(true);
+    }
+
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void QuitGame()
+    {
+        SceneManager.LoadScene("World");
     }
 
     // Update is called once per frame
@@ -37,6 +80,13 @@ public class SpawnManager : MonoBehaviour
                 SpawnEnemyWave(++waveNum);
                 SpawnPowerup();
             }
+
+            float elapsedTime = Time.time - startTime;
+            timeText.text = "Elapsed Time: " + elapsedTime.ToString("0.0");
+        }
+        else
+        {
+            GameOver();
         }
     }
 

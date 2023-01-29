@@ -10,6 +10,9 @@ public class GameMenu : MonoBehaviour
 
     }
 
+    public void QuitApp()
+    { Application.Quit(); }
+
     // Update is called once per frame
     void Update()
     {
