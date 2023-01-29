@@ -5,67 +5,46 @@ using UnityEngine.SceneManagement;
 
 public class GameMenu : MonoBehaviour
 {
-    private GameManager gameManager;
-
-    // title Screens
-    public GameObject BalloonTitle;
-    public GameObject VroomTitle;
-    public GameObject PerryTitle;
-
-    // canvas
-    public GameObject Canvas;
     void Start()
     {
-        
-    }
 
-    public void StartButton()
-    {
-        if(BalloonTitle.gameObject.activeSelf)
-        { SceneManager.LoadScene("BalloonGame"); }
-        else if(VroomTitle.gameObject.activeSelf)
-        { SceneManager.LoadScene("VroomVroom"); }
-        else if(PerryTitle.activeSelf)
-        { SceneManager.LoadScene("perry the plat ypus"); }
     }
-
-    public void BackToScene()
-    { Canvas.gameObject.SetActive(false); }
 
     // Update is called once per frame
     void Update()
     {
-        if (gameManager.isGameActive)
+
+
+        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
         {
+            // create a ray at the touch position
             Ray ray = Camera.main.ScreenPointToRay(Input.touches[0].position);
             RaycastHit hit;
-
             if (Physics.Raycast(ray, out hit))
             {
+                // check if the object hit is the same as the current object
                 if (hit.transform == this.transform)
                 {
-                    // open menu with correct name
-                    Canvas.gameObject.SetActive(true);
-
-                    if(gameObject.tag == "balloon")
+                    if (hit.transform.tag == "balloon")
                     {
-                        // activate title
-                        BalloonTitle.gameObject.SetActive(true);
+                        Debug.Log("In balloon");
+                        SceneManager.LoadScene("Balloon Game");
                     }
-                    else if(gameObject.tag == "VroomVroom")
+                    else if (hit.transform.tag == "VroomVroom")
                     {
-                        // activate title
-                        VroomTitle.gameObject.SetActive(true);
+                        Debug.Log("In Vroom");
+                        SceneManager.LoadScene("Vroom Vroom");
                     }
-                    else if(gameObject.tag == "perry the plat ypus")
+                    else if (hit.transform.tag == "perry the plat ypus")
                     {
-                        // active title
-                        PerryTitle.gameObject.SetActive(true);
+                        Debug.Log("In perry");
+                        SceneManager.LoadScene("Perry the plat ypus");
                     }
                 }
             }
-        }
 
-        // quit: Application.Quit();
+
+            // quit: Application.Quit();
+        }
     }
 }
