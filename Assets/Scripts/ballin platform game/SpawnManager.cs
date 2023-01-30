@@ -28,12 +28,9 @@ public class SpawnManager : MonoBehaviour
     private PlayerController PlayerScript;
 
     private float startTime;
-    private Text timeText;
+    public TextMeshProUGUI timeText;
 
-    private void Awake()
-    {
-        timeText = GetComponent<Text>();
-    }
+    private bool GameStatus = false;
 
     // Start is called before the first frame update
     void Start()
@@ -50,12 +47,14 @@ public class SpawnManager : MonoBehaviour
 
         PlayerScript = GameObject.Find("Player").GetComponent<PlayerController>();
         startTime = Time.time;
+        GameStatus = true;
     }
 
     public void GameOver()
     {
         gameOverText.gameObject.SetActive(true);
         restartButton.gameObject.SetActive(true);
+        GameStatus = false;
     }
 
     public void RestartGame()
@@ -71,7 +70,7 @@ public class SpawnManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!PlayerScript.getGameStatus())
+        if(!PlayerScript.getGameStatus() && GameStatus)
         {
             enemyCount = FindObjectsOfType<Enemy>().Length; // array length returned
 

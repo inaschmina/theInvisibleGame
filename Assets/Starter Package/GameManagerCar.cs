@@ -7,27 +7,20 @@ using UnityEngine.UI;
 
 public class GameManagerCar : MonoBehaviour
 {
-    // TITLE
-    public GameObject titleScreen;
-
     // GAME OVER TEXT
     public TextMeshProUGUI gameOverText;
     public Button restartButton;
+    public Button quitButton;
 
     // time
-    private float startTime;
-    private Text timeText;
+    public float startTime;
+    public TextMeshProUGUI timeText;
+
+    private bool GameStatus = false;
     // Start is called before the first frame update
     void Start()
     {
-        Time.timeScale = 0;
-    }
-
-    public void StartGame()
-    {
-        Time.timeScale = 1;
-        titleScreen.gameObject.SetActive(false);
-
+        GameStatus = true;
         startTime = Time.time;
     }
 
@@ -35,6 +28,8 @@ public class GameManagerCar : MonoBehaviour
     {
         gameOverText.gameObject.SetActive(true);
         restartButton.gameObject.SetActive(true);
+        quitButton.gameObject.SetActive(true);
+        GameStatus = false;
     }
 
     public void RestartGame()
@@ -50,9 +45,12 @@ public class GameManagerCar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Time.time == 60)
+        if(GameStatus)
         {
-            GameOver();
+            float elapsedTime = Time.time - startTime;
+            timeText.text = "Elapsed Time: " + elapsedTime.ToString("0.0");
+            if(elapsedTime > 60)
+            { GameOver();  }
         }
     }
 }
