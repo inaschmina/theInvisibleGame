@@ -28,7 +28,6 @@ public class GameManagerCar : MonoBehaviour
     {
         gameOverText.gameObject.SetActive(true);
         restartButton.gameObject.SetActive(true);
-        quitButton.gameObject.SetActive(true);
         GameStatus = false;
     }
 
@@ -39,6 +38,7 @@ public class GameManagerCar : MonoBehaviour
 
     public void QuitGame()
     {
+        Debug.Log("Quit clicked");
         SceneManager.LoadScene("World");
     }
 
@@ -48,7 +48,7 @@ public class GameManagerCar : MonoBehaviour
         if(GameStatus)
         {
             float elapsedTime = Time.time - startTime;
-            timeText.text = "Elapsed Time: " + elapsedTime.ToString("0.0");
+            timeText.text = "time: " + elapsedTime.ToString("0.0");
             if(elapsedTime > 60)
             { GameOver();  }
         }
