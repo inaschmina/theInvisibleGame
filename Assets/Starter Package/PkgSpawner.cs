@@ -19,11 +19,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 
+using TMPro;
+
 public class PkgSpawner : MonoBehaviour
 {
     public DrivingSurfaceManager DrivingSurfaceManager;
     public PackageBehaviour Package;
     public GameObject PackagePrefab;
+
+    public TextMeshProUGUI scoreText;
+    private int score = -1;
 
     public static Vector3 RandomInTriangle(Vector3 v1, Vector3 v2)
     {
@@ -67,6 +72,8 @@ public class PkgSpawner : MonoBehaviour
             if (Package == null)
             {
                 SpawnPackage(lockedPlane);
+                score++;
+                scoreText.text = "Score: " + score;
             }
 
             var packagePosition = Package.gameObject.transform.position;

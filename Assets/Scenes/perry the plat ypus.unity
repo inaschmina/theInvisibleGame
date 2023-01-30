@@ -179,9 +179,9 @@ GameObject:
   m_Component:
   - component: {fileID: 65757664}
   - component: {fileID: 65757668}
+  - component: {fileID: 65757669}
   - component: {fileID: 65757666}
   - component: {fileID: 65757665}
-  - component: {fileID: 65757669}
   m_Layer: 5
   m_Name: 'Start Button '
   m_TagString: Untagged
@@ -324,8 +324,8 @@ GameObject:
   m_Component:
   - component: {fileID: 378995736}
   - component: {fileID: 378995739}
-  - component: {fileID: 378995737}
   - component: {fileID: 378995740}
+  - component: {fileID: 378995737}
   m_Layer: 0
   m_Name: Quit Button
   m_TagString: Untagged
@@ -534,8 +534,8 @@ GameObject:
   m_Component:
   - component: {fileID: 426402035}
   - component: {fileID: 426402038}
-  - component: {fileID: 426402036}
   - component: {fileID: 426402039}
+  - component: {fileID: 426402036}
   m_Layer: 5
   m_Name: Restart Button
   m_TagString: Untagged

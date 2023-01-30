@@ -652,9 +652,9 @@ GameObject:
   m_Component:
   - component: {fileID: 255496268}
   - component: {fileID: 255496272}
+  - component: {fileID: 255496273}
   - component: {fileID: 255496270}
   - component: {fileID: 255496269}
-  - component: {fileID: 255496273}
   m_Layer: 5
   m_Name: 'Medium Button '
   m_TagString: Untagged
@@ -1188,8 +1188,8 @@ GameObject:
   m_Component:
   - component: {fileID: 629399198}
   - component: {fileID: 629399201}
-  - component: {fileID: 629399199}
   - component: {fileID: 629399202}
+  - component: {fileID: 629399199}
   m_Layer: 0
   m_Name: Quit Button
   m_TagString: Untagged
@@ -1930,8 +1930,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1328042267}
   - component: {fileID: 1328042270}
-  - component: {fileID: 1328042268}
   - component: {fileID: 1328042271}
+  - component: {fileID: 1328042268}
   m_Layer: 5
   m_Name: Restart Button
   m_TagString: Untagged
@@ -2061,9 +2061,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1410333489}
   - component: {fileID: 1410333493}
+  - component: {fileID: 1410333494}
   - component: {fileID: 1410333491}
   - component: {fileID: 1410333490}
-  - component: {fileID: 1410333494}
   m_Layer: 5
   m_Name: Easy Button
   m_TagString: Untagged
@@ -2435,9 +2435,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1991530405}
   - component: {fileID: 1991530409}
+  - component: {fileID: 1991530410}
   - component: {fileID: 1991530407}
   - component: {fileID: 1991530406}
-  - component: {fileID: 1991530410}
   m_Layer: 5
   m_Name: Hard Button
   m_TagString: Untagged

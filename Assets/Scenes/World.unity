@@ -234,8 +234,8 @@ GameObject:
   m_Component:
   - component: {fileID: 306114103}
   - component: {fileID: 306114106}
-  - component: {fileID: 306114104}
   - component: {fileID: 306114107}
+  - component: {fileID: 306114104}
   m_Layer: 5
   m_Name: Quit
   m_TagString: Untagged
@@ -304,7 +304,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 306114107}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -561,7 +561,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cursorChildObject: {fileID: 919132149155446097, guid: c089bc0a1202749f5b9e3ddd3fe5b371,
     type: 3}
-  objectToPlace: {fileID: 9124507733317256167, guid: c28ec37f9ab1d1241934e9f33ec31b86,
+  objectToPlace: {fileID: 2158576845874515450, guid: 07c58bcdab2f3434b921e3fbd5ac15f5,
     type: 3}
   raycastManager: {fileID: 1659859602}
   useCursor: 1
